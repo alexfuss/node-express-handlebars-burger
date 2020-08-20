@@ -1,7 +1,7 @@
 // Create required const variables
-const express = require("express");
-const router = express.Router();
-const burger = require("../models/burger.js");
+var express = require("express");
+var router = express.Router();
+var burger = require("../models/burger.js");
 
 // Setup all routes
 router.get("/", function(req, res) {
@@ -11,7 +11,7 @@ router.get("/", function(req, res) {
 // Index view
 router.get("/index", function(req, res) {
     burger.selectAll(function(data) {
-        let hbsObj = { burgers: data };
+        var hbsObj = { burgers: data };
         
         console.log(hbsObj);
         res.render("index", hbsObj);

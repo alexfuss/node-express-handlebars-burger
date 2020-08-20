@@ -1,7 +1,7 @@
-const orm = require("../config/orm.js");
+var orm = require("../config/orm.js");
 
 // Call the orm functions
-let burger = {
+var burger = {
 
     selectAll: function(cb) {
         orm.selectAll(function(res) {
